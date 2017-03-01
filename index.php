@@ -5,6 +5,7 @@
          '"Pascal"' => array(45),
         '"Eric"' => array(48),
         '"Nicolas"'  => array(19),
+
 );
      echo '$students = ['.PHP_EOL;
   foreach ($students as $key => $favorite) {
