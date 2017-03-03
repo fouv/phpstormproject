@@ -1,20 +1,21 @@
 <?php
      $students = array(
-        '"Emmanuel"'  => array(42),
-         '"Thierry"'  => array(51),
-         '"Pascal"' => array(45),
-        '"Eric"' => array(48),
-        '"Nicolas"'  => array(19),
-
+        '"Emmanuel"'  => 42,
+         '"Thierry"'  => 51,
+         '"Pascal"' => 45,
+        '"Eric"' => 48,
+        '"Nicolas"'  => 19,
 );
+     $totalAge = 0;
+
+     $totalStudents = count($students);
      echo '$students = ['.PHP_EOL;
-  foreach ($students as $key => $favorite) {
-      echo "$key => ";
-      foreach ($favorite as $content) {
-          echo $content . "";
-      }
-      echo PHP_EOL;
-  }
-  echo '];'.PHP_EOL;
-  $moyAge = (42 + 51 + 45 + 48 + 19)/5;
-    echo "Moyenne des ages : ".$moyAge;
+      foreach ($students as $key => $value)
+      {
+        echo "$key => ".$value ."".PHP_EOL;
+          $totalAge += $value;
+              }
+        echo '];'.PHP_EOL;
+
+       $average = $totalAge / count($students);
+        echo $average;
